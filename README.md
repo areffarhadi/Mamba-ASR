@@ -1,15 +1,20 @@
 # ConMamba [![arXiv](https://img.shields.io/badge/arXiv-2407.09732-<COLOR>.svg)](https://arxiv.org/abs/2407.09732)
 
-An official implementation of convolution-augmented Mamba for speech recognition.
+This is a fork of an implementation of convolution-augmented Mamba for speech recognition.
 
-## Training
-To train a ConMamba Encoder-Transformer Decoder model on one GPU:
+## Changes in this Fork
+we changed the structure of the data preparation code and prepared two training strategies: 1. training Mamba ASR for any dataset 2. training MAmba ASR for a mix of Librispeech and any other datasets together (recommended)
+
+You can modify the YAML file to change the architecture of the model.
+
+## New training
+To train a ConMamba Encoder-Mamba Decoder model on one GPU for any dataset:
 ```
-python train_S2S.py hparams/S2S/conmamba_large(small).yaml --data_folder <YOUR_PATH_TO_LIBRISPEECH> --precision bf16 
+python train_S2S_dataset.py hparams/S2S/conmambamamba_small_dataset.yaml --data_folder <YOUR_PATH_TO_LIBRISPEECH> --precision bf16 
 ```
-To train a ConMamba Encoder-Mamba Decoder model on one GPU:
+To train a ConMamba Encoder-Mamba Decoder model on one GPU for mixing any dataset with Librispeech to improve the performance:
 ```
-python train_S2S.py hparams/S2S/conmambamamba_large(small).yaml --data_folder <YOUR_PATH_TO_LIBRISPEECH> --precision bf16 
+python train_S2S.py hparams/S2S/conmambamamba_small_mix.yaml --data_folder <YOUR_PATH_TO_LIBRISPEECH> --precision bf16 
 ```
 
 ## Architecture
