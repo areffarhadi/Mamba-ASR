@@ -5,7 +5,8 @@ This is a fork of an implementation of convolution-augmented Mamba for speech re
 ## Changes in this Fork
 we changed the structure of the data preparation code and prepared two training strategies: <be> 
 1. training Mamba ASR for any dataset <be>
-2. training Mamba ASR for a mix of Librispeech and any other datasets (recommended)
+      in this strategy, we suppose the dataset consists of a directory with lots of folders each folder is spkr_id, and a txt file in the directory consisting of the text of all the utterances
+   2. training Mamba ASR for a mix of Librispeech and any other datasets (recommended)
 
 You can modify the YAML file to change the architecture of the model.
 
