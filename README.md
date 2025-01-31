@@ -3,7 +3,7 @@
 This is a fork of an implementation of convolution-augmented Mamba for speech recognition.
 
 ## Changes in this Fork
-we changed the structure of the data preparation code and prepared two training strategies: 1. training Mamba ASR for any dataset 2. training MAmba ASR for a mix of Librispeech and any other datasets together (recommended)
+we changed the structure of the data preparation code and prepared two training strategies: <be> 1. training Mamba ASR for any dataset <br>2. training MAmba ASR for a mix of Librispeech and any other datasets together (recommended)
 
 You can modify the YAML file to change the architecture of the model.
 
