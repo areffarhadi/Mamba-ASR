@@ -2,6 +2,16 @@
 
 An official implementation of convolution-augmented Mamba for speech recognition.
 
+## Training
+To train a ConMamba Encoder-Transformer Decoder model on one GPU:
+```
+python train_S2S.py hparams/S2S/conmamba_large(small).yaml --data_folder <YOUR_PATH_TO_LIBRISPEECH> --precision bf16 
+```
+To train a ConMamba Encoder-Mamba Decoder model on one GPU:
+```
+python train_S2S.py hparams/S2S/conmambamamba_large(small).yaml --data_folder <YOUR_PATH_TO_LIBRISPEECH> --precision bf16 
+```
+
 ## Architecture
 
 <img src="figures/conmamba.png" alt="conmamba" width="80%">
