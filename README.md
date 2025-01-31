@@ -24,7 +24,7 @@ python train_S2S.py hparams/S2S/conmambamamba_small_mix.yaml --data_folder <YOUR
 <img src="figures/conmamba.png" alt="conmamba" width="80%">
 <img src="figures/mamba_encoder_decoder.png" alt="layers" width="80%">
 
-## Prerequisites
+## ASR on LibriSpeech Dataset
 
 1. Download LibriSpeech [corpus](https://www.openslr.org/12).
 
@@ -74,6 +74,3 @@ If you find this work helpful, please consider citing:
       url={https://arxiv.org/abs/2407.09732}, 
 }
 ```
-
-You may also like our Mamba for speech separation: https://github.com/xi-j/Mamba-TasNet
-
