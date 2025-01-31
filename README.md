@@ -30,9 +30,9 @@ python train_S2S.py hparams/S2S/conmambamamba_small_mix.yaml --data_folder <YOUR
 
 2. Install Packages.
 ```
-conda create --name Slytherin python=3.9
-conda activate Slytherin
-pip install -r requirements.txt
+python -m venv mamba-env 
+source mamba-env/bin/activate
+pip install -r requirements_mamba.txt
 ```
 You may need to install lower or higher versions of torch, torchaudio, causal-conv1d and mamba-ssm based on your hardware and system. Make sure they are compatible. 
 
